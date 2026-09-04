@@ -203,3 +203,13 @@ button[type="submit"]:hover {
     font-size: 14px;
     line-height: 1.8;
 }
+
+.error-text {
+    color: var(--high);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid var(--high);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 14px;
+    margin: 0;
+}

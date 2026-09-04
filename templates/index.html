@@ -92,14 +92,16 @@
                     <label for="MonthlyCharges">Monthly Charges ($)</label>
                     <input type="number" id="MonthlyCharges" name="MonthlyCharges" step="0.01" min="0"
                            value="{{ form_data.MonthlyCharges if form_data else '' }}" required />
-
-                    <label for="TotalCharges">Total Charges ($)</label>
-                    <input type="number" id="TotalCharges" name="TotalCharges" step="0.01" min="0"
-                           value="{{ form_data.TotalCharges if form_data else '' }}" required />
                 </fieldset>
 
                 <button type="submit">Predict Churn Risk</button>
             </form>
+
+            {% if error %}
+            <div class="card result-card">
+                <p class="error-text">{{ error }}</p>
+            </div>
+            {% endif %}
 
             {% if prediction %}
             <div class="card result-card">
